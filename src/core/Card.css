@@ -1,0 +1,157 @@
+.equipments-card {
+    background: linear-gradient(90.14deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.28) 100%);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    border: 2px solid #fff;
+    padding: 1.5rem;
+    width: 27vw;
+    overflow: hidden;
+}
+
+.equipments-card:hover {
+    /* background-color: mediumspringgreen; */
+    border: 2px solid #069E2D;
+    transition: 0.5s;
+}
+
+.equipment-name, .equipment-description, .equipment-details {
+    text-align: center;
+}
+
+.equipment-name, .equipment-details {
+    color: #036016;
+}
+
+.equipment-name {
+    font-size: 1.3rem;
+}
+
+.equipment-description, .quantity-input {
+    color: #9E6A30;
+    font-size: 1.1rem;
+}
+
+.equipment-details, .equipment-added-time {
+    background: linear-gradient(269.03deg, rgba(255, 255, 255, 0.4) 0.86%, rgba(255, 255, 255, 0.4) 99.19%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.in-stock-text, .out-of-stock-text {
+    color: #EDF5E1;
+    border-radius: 30px;
+    padding: 0.2rem 0.5rem;
+}
+
+.in-stock-text {
+    background-color: #069E2D;
+}
+
+.out-of-stock-text {
+    background-color: tomato;
+}
+
+.equipment-cards-btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.cards-btn {
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13vw;
+    /* height: 3rem; */
+    border-radius: 10px;
+}
+
+.view-btn-style, .cart-btn-style {
+    border: 2px solid #036016;
+}
+
+.view-btn-style, .remove-btn-style, .cart-btn-style:hover {
+    color: #EDF5E1;
+}
+
+.view-btn-style, .cart-btn-style:hover {
+    background-color: #036016;
+}
+
+.cart-btn-style, .view-btn-style:hover {
+    color: #036016;
+    background-color: transparent;
+}
+
+.remove-btn-style {
+    background-color: tomato;
+    border: 2px solid tomato;
+}
+
+.remove-btn-style:hover {
+    background-color: transparent;
+    color: tomato;
+}
+
+.view-btn-style:hover, .cart-btn-style:hover, .remove-btn-style:hover {
+    transition: 0.8s;
+}
+
+.cart-quantity-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.quantity-field-group {
+    color: #036016;
+}
+
+.quantity-field-group label {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+}
+
+.quantity-input {
+    background: linear-gradient(269.03deg, rgba(255, 255, 255, 0.4) 0.86%, rgba(255, 255, 255, 0.4) 99.19%);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    outline: none;
+    width: 8rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .equipments-card {
+        width: 40vw;
+    }
+
+    .equipment-name {
+        font-size: 1rem;
+    }
+
+    .equipment-description, .equipment-details {
+        font-size: 0.7rem;
+    }
+
+    .cards-btn {
+        width: 100%;
+        margin: 0.3rem 0;
+    }
+
+    .equipment-cards-btn-container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .equipments-card {
+        width: 70vw;
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,37 @@
+#copyright-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('../assets/crop-animated.png');;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top: 3px solid #fff;
+    padding: 1.5rem 0 8rem 0;
+}
+
+#copyright-container p {
+    color: #036016;
+    font-size: 1.1rem;
+    background: linear-gradient(90.14deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.28) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 0.5rem 3rem;
+}
+
+#copyright-container span {
+    color: #9E6A30;
+}
+
+
+@media screen and (max-width: 768px) {
+    #copyright-container p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #copyright-container p {
+        font-size: 0.7rem;
+    }
+}

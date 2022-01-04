@@ -1,0 +1,42 @@
+#view-equipments-content {
+    padding: 6rem 1.5rem;
+}
+
+.equipment-details-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 6rem;
+}
+
+.related-equipments-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 2rem;
+}
+
+.product-page-text {
+    background: linear-gradient(90.14deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.28) 100%);
+    backdrop-filter: blur(10px);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #036016;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .related-equipments-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .related-equipments-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

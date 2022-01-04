@@ -1,0 +1,131 @@
+
+@font-face {
+  font-family: 'Poppins-600';
+  src: local('Poppins-SemiBold.ttf'), url('../public/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  /* background-color: #95C8FD; */
+  background: linear-gradient(245.23deg, #3FF28D 0%, rgba(63, 242, 141, 0.2) 100%);
+  cursor: url('./assets/custom-cursor.png'), auto;
+}
+
+/* custom scrollbar for mozilla */
+html {
+  scrollbar-color: #3FF28D #036016;
+  scrollbar-width: thin;
+}
+
+/* custom scrollbar for chrome */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  /* background: #54A8FF; */
+  background: #3FF28D;
+  border-radius: 4px;
+}
+body::-webkit-scrollbar-thumb {
+  height: 10rem;
+  border-radius: 4px;
+  background: linear-gradient(268.12deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.07) 100%);
+  backdrop-filter: blur(50px);
+  border: 2px solid #EDF5E1;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #EDF5E1;
+}
+
+body, select, input, button {
+  font-family: 'Poppins-600';
+}
+
+body a {
+  text-decoration: none;
+}
+
+.jumbotron-title-container p {
+  margin: 0;
+  color: #036016;
+  font-size: 32px;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jumbotron-home {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./assets/home-bg.png');
+}
+
+.jumbotron-rent {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./assets/rent-bg.png');
+}
+
+.jumbotron-cart {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./assets/cart-bg.png');
+}
+
+.jumbotron-signin {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./assets/signin-bg.png');
+}
+
+.jumbotron-signup {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./assets/signup-bg.png');
+}
+
+.jumbotron-home, .jumbotron-rent, .jumbotron-cart, .jumbotron-signin, .jumbotron-signup {
+  height: 500px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.jumbotron-title-container {
+  background: linear-gradient(268.12deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.07) 100%);
+  backdrop-filter: blur(10px);
+  border: 2px solid #fff;
+  padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .jumbotron {
+    height: 270px;
+  }
+
+  .jumbotron-title-container {
+    padding: 1rem;
+  }
+
+  .jumbotron p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .jumbotron {
+    height: 170px;
+  }
+
+  .jumbotron p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .jumbotron {
+    height: 120px;
+  }
+
+  .jumbotron p {
+    font-size: 10px;
+  }
+}

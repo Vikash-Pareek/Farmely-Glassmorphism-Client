@@ -1,0 +1,219 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(90.14deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.28) 100%);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  animation: fadeInLoadAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInLoadAnimation {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+   }
+}
+
+@-moz-keyframes fadeInLoadAnimation {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+   }
+}
+
+@keyframes fadeInLoadAnimation {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+   }
+}
+
+.loading-container img {
+  width: 10rem;
+}
+
+.loading-container h1 {
+  color: #036016;
+}
+
+.page-scroll-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0 6rem 0;
+}
+
+.page-scroll-icon-container button {
+  background: linear-gradient(269.03deg, rgba(255, 255, 255, 0.4) 0.86%, rgba(255, 255, 255, 0.4) 99.19%);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: #036016;
+  cursor: pointer;
+}
+
+.page-scroll-icon-container button:hover {
+  color: #9E6A30;
+  border: 2px solid #9E6A30;
+  transition: 0.5s;
+}
+
+#cards-content {
+    padding: 0 1.5rem 6rem 1.5rem;
+}
+
+.cards-container-title-one, .cards-container-title-two {
+    color: #036016;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(269.03deg, rgba(255, 255, 255, 0.4) 0.86%, rgba(255, 255, 255, 0.4) 99.19%);
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.cards-container-title-two {
+    margin-top: 5rem;
+}
+
+.equipments-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 2rem;
+}
+
+
+.new-arrival-container-bg {
+    background: url('../assets/new-arrivals-bg.png');
+}
+
+.best-seller-container-bg {
+    background: url('../assets/best-sellers-bg.png');
+}
+
+.new-arrival-container-bg, .best-seller-container-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-animation: BG-Image 15s ease infinite;
+    -moz-animation: BG-Image 15s ease infinite;
+    animation: BG-Image 15s ease infinite;
+}
+
+@-webkit-keyframes BG-Image {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @-moz-keyframes BG-Image {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes BG-Image {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .arrow-down-icon-container {
+      display: none;
+    }
+
+    #cards-content {
+      padding: 6rem 0.5rem;
+    }
+
+    .equipments-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .new-arrival-container-bg, .best-seller-container-bg {
+      background-size: 100%;
+    }
+
+    @-webkit-keyframes BG-Image {
+      0% {
+        background-position: 100% 0%;
+      }
+      50% {
+        background-position: 50% 100%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
+    }
+    
+    @-moz-keyframes BG-Image {
+      0% {
+        background-position: 100% 0%;
+      }
+      50% {
+        background-position: 50% 100%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
+    }
+    
+    @keyframes BG-Image {
+      0% {
+        background-position: 100% 0%;
+      }
+      50% {
+        background-position: 50% 100%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #cards-content {
+      padding: 6rem 0rem;
+    }
+    .equipments-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

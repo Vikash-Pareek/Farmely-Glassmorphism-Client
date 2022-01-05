@@ -1,0 +1,105 @@
+#user-auth-container, .user-auth-form-container, .user-auth-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#user-auth-container, .user-auth-form-container {
+    padding: 5rem 0;
+}
+
+.user-auth-form-container {
+    background: linear-gradient(90.14deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.28) 100%);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    border: 2px solid #fff;
+    padding: 2rem 3rem;
+    width: 30vw;
+}
+
+.user-auth-icon, .user-auth-form-container h1, .form-link-text, .success-text span {
+    color: #9E6A30;   
+}
+
+.user-auth-icon {
+    background: linear-gradient(269.03deg, rgba(255, 255, 255, 0.4) 0.86%, rgba(255, 255, 255, 0.4) 99.19%);
+    /* border: 2px solid rgba(255, 255, 255, 0.7); */
+    border: 1px solid #9E6A30;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.user-auth-form-container h1 {
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.user-auth-form-container h1, .form-link-text {
+    margin: 0;
+}
+
+.user-auth-form {
+    margin: 3rem 0;
+    width: 100%;
+}
+
+.form-field-container, .loading-text, .success-text {
+    color: #036016;
+}
+
+.form-field-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-field-container span, .auth-error-text {
+    color: tomato;
+}
+
+.form-field-container input {
+    background: linear-gradient(269.03deg, rgba(255, 255, 255, 0.4) 0.86%, rgba(255, 255, 255, 0.4) 99.19%);
+    border: 3px solid #fff;
+    border-radius: 30px;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.user-auth-form-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: 2px solid #036016;
+    background-color: #036016;
+    color: #EDF5E1;
+    cursor: pointer;
+}
+
+.user-auth-form-btn:hover {
+    background-color: transparent;
+    border: 2px solid #036016;
+    color: #036016;
+    transition: 0.5s;
+}
+
+.form-link-text:hover {
+    color: #069E2D;
+    transition: 0.8s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .user-auth-form-container {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .user-auth-form-container {
+        width: 65vw;
+        padding: 2rem;
+    }
+}

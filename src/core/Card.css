@@ -73,15 +73,15 @@
     border: 2px solid #036016;
 }
 
-.view-btn-style, .remove-btn-style, .cart-btn-style:hover {
+.cart-btn-style, .remove-btn-style, .view-btn-style:hover {
     color: #EDF5E1;
 }
 
-.view-btn-style, .cart-btn-style:hover {
+.cart-btn-style, .view-btn-style:hover {
     background-color: #036016;
 }
 
-.cart-btn-style, .view-btn-style:hover {
+.view-btn-style, .cart-btn-style:hover {
     color: #036016;
     background-color: transparent;
 }

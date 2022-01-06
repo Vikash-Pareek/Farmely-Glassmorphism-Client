@@ -10,36 +10,6 @@
   position: fixed;
   top: 0;
   z-index: 1;
-  animation: fadeInLoadAnimation ease 2s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes fadeInLoadAnimation {
-  0% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-   }
-}
-
-@-moz-keyframes fadeInLoadAnimation {
-  0% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-   }
-}
-
-@keyframes fadeInLoadAnimation {
-  0% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-   }
 }
 
 .loading-container img {

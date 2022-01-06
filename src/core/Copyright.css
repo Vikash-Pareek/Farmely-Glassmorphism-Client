@@ -23,6 +23,10 @@
     color: #9E6A30;
 }
 
+#copyright-container span:hover {
+    color: #069E2D;
+}
+
 
 @media screen and (max-width: 768px) {
     #copyright-container p {

@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Farmerly - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> For Backend code visit :
+  <b>https://github.com/Vikash-Pareek/Farmerly-Glassmorphism-Server</b>
 
-## Available Scripts
+<br/>
 
-In the project directory, you can run:
 
-### `npm start`
+#### Website works best in Google Chrome browser
+#### For best experience in Mozilla Firefox browser do the following :
+    1. type "about:config" in the browser's url address bar and press Enter.
+    
+    2. Accept the warning.
+    
+    3. type "layout.css.backdrop-filter.enabled" in the search bar and click on the reversible arrow icon on the extreme right and change the value from "false" to "true".
+    
+    4. Next, type "gfx.webrender.all" in the search bar and click on the reversible arrow icon on the extreme right and change the value from "false" to "true".
+    
+    => Learn More:
+    https://dev.to/snkds/how-to-enable-backdrop-filter-in-firefox-2n8e
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br/>
+<br/>
+<br/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Frontend-> React JS
 
-### `npm test`
+> Backend-> Node JS & Express JS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Database-> MongoDB
 
-### `npm run build`
+## Installation Process
+1. #### Clone the repo using this command
+    ```bash
+    git clone https://github.com/Vikash-Pareek/Farmerly-Glassmorphism-Client.git
+    ```
+2. #### Install NPM Packages :
+    ```bash
+    cd Farmerly-Glassmorphism-Client
+    npm install
+    ```
+3. #### Start the project :
+    ```bash
+    npm start
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Website Description:
+    1. User can view all equiments
+    2. User can view single equipment
+    3. User can search equipments and view equiments by Brand and Price Range
+    4. User can Add equipments to Cart, Checkout equipments using credit card info
+    5. User can register & sign in
+    6. Admin can create, edit, update & delete equipments
+    7. Admin can create Brands
+    8. Admin can view rented equipments
+    9. Admin can change the status of a equipment (processing, shipped, delivered, etc.)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br/>
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Website's Live Deployed Link :
+   <br/><b>https://farmerly.netlify.app/</b>

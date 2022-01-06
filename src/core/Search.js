@@ -6,21 +6,22 @@ import CloseIcon from '@mui/icons-material/Close';
 
 
 const Search = () => {
-  const [searchBoxOpen, setSearchBoxOpen] = useState(false);
-
-  const searchBoxClose = () => {
-    setSearchBoxOpen(!searchBoxOpen);
-  };
-
   const [data, setData] = useState({
     categories: [],
     category: "",
     search: '',
     results: [],
     searched: false,
+    loading: true
   });
 
-  const { categories, category, search, results, searched } = data;
+  const { categories, category, search, results, searched, loading } = data;
+
+  const [searchBoxOpen, setSearchBoxOpen] = useState(false);
+
+  const searchBoxToggle = () => {
+    setSearchBoxOpen(!searchBoxOpen);
+  };
 
   const loadCategories = () => {
     getCategories().then((data) => {
@@ -43,12 +44,12 @@ const Search = () => {
           if (response.error) {
             console.log(response.error);
           } else {
-            setData({ ...data, results: response, searched: true });
+            setData({ ...data, results: response, searched: true, loading: false });
           }
         }
       );
     } else {
-      return null;
+      setData({ ...data, results: [], loading: false });
     }
   };
 
@@ -58,8 +59,13 @@ const Search = () => {
   };
 
   const handleChange = (name) => (event) => {
-    setData({ ...data, [name]: event.target.value, searched: false });
+    setData({ ...data, [name]: event.target.value, searched: false, loading: true });
   };
+
+  const showLoading = () =>
+    loading && (
+      <h2 style={{ color: '#036016', textAlign: 'center' }}>Loading...</h2>
+    );
 
   const searchMessage = (searched, results) => {
     if (searched && results.length > 0) {
@@ -82,14 +88,20 @@ const Search = () => {
   const searchedProducts = (results = []) => {
     return (
       <>
-        {searchMessage(searched, results)}
-        <div className='search-equipments-card-container'>
-          {results.map((product, i) => (
-            <div key={i}>
-              <Card product={product} search={true} />
-            </div>
-          ))}
-        </div>
+        {
+          loading ? showLoading() : (
+            <>
+              {searchMessage(searched, results)}
+              <div className='search-equipments-card-container'>
+                {results.map((product, i) => (
+                  <div key={i}>
+                    <Card product={product} search={true} />
+                  </div>
+                ))}
+              </div>
+            </>
+          )
+        }
       </>
     );
   };
@@ -112,7 +124,7 @@ const Search = () => {
 
       <input onChange={handleChange('search')} placeholder="Search By Equipment" className='search-input' />
 
-      <button type='submit' className='search-btn' onClick={searchBoxClose}>
+      <button type='submit' className='search-btn' onClick={searchBoxToggle}>
         Search
       </button>
     </form>
@@ -124,7 +136,7 @@ const Search = () => {
       {
         searchBoxOpen ? (
           <div className='search-result-container'>
-            <button className='search-container-close-btn' onClick={searchBoxClose}>
+            <button className='search-container-close-btn' onClick={searchBoxToggle}>
               <CloseIcon fontSize='large' />
               <h2>Close</h2>
             </button>
